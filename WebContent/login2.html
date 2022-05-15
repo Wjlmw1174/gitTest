@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="format-detection" content="telephone=no,email=no,adress=no"/>
+
+
+<title>登录</title>
+<!-- 一个网页比较完美地添加到桌面 -->
+<link rel="apple-touch-icon-precomposed" href="touch-icon-iphone.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="touch-icon-ipad.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="touch-icon-ipad-retina.png">
+<!-- 一个网页比较完美地添加到桌面 -->
+<link rel="apple-touch-startup-image" href="imgs/apple-touch/apple-touch-startup-image-320x460.png"/>
+
+</head>
+<script type="text/javascript">
+	function getBaseURL() {
+		var url = "/";
+		if (window.location.pathname.indexOf("/") == 0) {
+			var ss = window.location.pathname.split("/");
+			url = url + ss[1] + "/";
+		} else {
+			var ss = window.location.pathname.split("/");
+			url = url + ss[0] + "/";
+		}
+		return url;
+	}
+
+</script>
+<script src="js/libs/require.js" data-main="js/libs/main.js"></script>
+<style type="text/css">
+        body>*{ width:980px; height:auto; margin:0 auto; margin-top:10px;
+           border:1px solid #000; padding:5px;}
+        header{ height:50px;}
+        section{ height:300px;}
+        footer{ height:30px;}
+        section>*{ height:100%; border:1px solid #000; float:left;}
+        aside{ width:250px;}
+        article{ width:700px; margin-left:10px;}
+    </style>
+<body>
+	<header>header</header>
+	<nav>nav</nav>
+	<section>
+	    <aside>aside</aside>
+	    <article>article</article>
+	</section>
+	<footer>footer</footer>
+
+
+</body>
+</html>

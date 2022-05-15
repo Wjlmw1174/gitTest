@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="format-detection" content="telephone=no,email=no,adress=no"/>
+
+
+<title>登录</title>
+<link rel="stylesheet" href="css/yundao.css"/>
+<style type="text/css">
+	* {margin:0;padding:0;} 
+	li{list-style: none;}/* 去除前面的图标 */
+	a{text-decoration: none;}/*去下划线  */
+	
+	body{/*这个颜色主要为了谐音发发发，电商平台*/
+   	  background-color: #fafafa;
+	}
+	  
+	.clearfix:AFTER{/* 父标签清除浮动  */
+		content: "";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	
+	.clearfix{
+		*zoom: 1;  /* IE6和7 专有 */
+	}
+
+	.top{
+		background-color: #FFFFFF;/* 白色 */
+	}
+	
+	.top_iner{
+		width: 1200px;
+		height: 100px;
+		margin: 0 auto;
+	}
+	
+	.top_iner a{
+		display: inline-block;
+		float: left;
+	}
+	
+	.top_iner ul{
+		float: right;
+	}
+	
+	.top_iner ul li{
+		float: left;
+		line-height: 100px;
+		margin: 0 23px;
+	}
+	
+	.top_iner li:HOVER {
+		color: blue;
+		cursor: pointer;
+	}
+	
+	.banner{
+		text-align: center;/* 块内元素居中对齐 */
+	}
+	
+	.service{
+		width: 1005px;
+		margin: 0 auto;
+		margin-top: 74px;
+	}
+	
+	.service .service_hd{
+		border-top: 1px solid #ccc;
+		width: 1005px;
+		margin: 52px auto;/* 没有auto，整体样式会更居中，有auto居中的同时有左右拉扯的感觉 */
+	}
+	
+	.service_hd h3{
+		text-align: center;/* margin: 0 auto 没有启作业*/
+		margin-top: -22px;
+	}
+	
+	.service_hd p{
+		margin: 15px 87.5px 0px;;
+		margin-top: 22px;
+		text-align: center;
+		color: #666;
+		font-size: 12px;
+	}
+	
+	.service_bd{
+		width: 1005px;
+		margin: 0 auto;
+		overflow: hidden;/* 去除浮动，去除的是li的浮动 */
+	}
+	
+	.service_bd li{
+		float: left;
+		border: 1px solid #ccc;
+		width: 320px;
+		height: 450px;
+		text-align: center;
+		background-color: #FFFFFF;
+	}
+	
+	.service_bd li img {
+		margin: 45px 35px;
+		width: 248px;
+    	height: 132px;/*需要设定图片宽和高，图片自身宽高可能破坏布局  */
+	}
+	
+	.service_bd li h3 {
+		text-align: center;
+		font-weight: normal;
+		height: 40px;/* 设置标题高度，居中对齐，上下自然间距 */
+	}
+	
+	.service_bd li p {
+		font-size: 12px;
+		margin: 0 35px;
+		line-height: 25px;
+		color: #666;
+	}
+	
+	.service_bd li a {
+		display: block;
+		font-size: 12px;
+		border: 1px solid #FF9412;
+		text-align: center;
+		margin: 0 auto;
+		margin-top: 20px;
+		color: #FF9412;
+		width: 150px;
+		height: 38px;
+		line-height: 38px;
+		border-radius: 5px;
+	}
+	
+	.service_bd li a:HOVER {
+		background-color: #FF9412;
+		color: #FFFFFF;
+	}
+	
+	/* 设置外边框，3个li有间距 */
+	.service_bd_li_mid{
+		margin: 0 15px;
+	}
+	
+	.case{
+		padding: 30px 0 40px;/* 内间距30  右间距0  下间距40  左间距0 */
+		margin: 0 auto;
+		margin-top: 74px;/*  */
+		background-color: #FFFFFF;/* 设置白色背景，因为没有设置宽度，所有这个背景是100% */
+	}
+	
+	.case_hd, .media_hd{
+		border-top: 1px solid #ccc;
+		width: 1005px;
+		margin: 52px auto;/* 没有auto，整体样式会更居中，有auto居中的同时有左右拉扯的感觉 */
+	}
+	
+	.case_hd h3{
+		margin: 0 auto;  
+		margin-top: -22px;
+		width: 167px;
+    	height: 44px;
+	}
+	
+	.case_bd  {
+		width: 1055px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.case_bd ul{
+		overflow: hidden;/* ul如果不清除浮动，ul的图片会溢出 case_bd*/
+	}
+	
+	.case_bd li{
+		float: left;
+		background-color: #FFFFFF;
+		position: relative;
+		/* 如果没有设置宽度和高度，p的遮盖位置会溢出1或2px */
+		width: 322px;
+    	height: 211px;
+	}
+	
+	.case_bd li img{
+		width: 322px;
+    	height: 211px;/*需要设定图片宽和高，图片自身宽高可能破坏布局  */
+	}
+	
+	/* 设置外边框，3个li有间距 */
+	.case_bd_li_mid{
+		margin: 0 30px;
+	}
+	
+	.case_bd li p{
+		width: 100%;
+    	height: 40px;/*需要设定图片宽和高，图片自身宽高可能破坏布局  */
+    	line-height: 40px;
+    	text-align: center;
+    	background-color: rgb(6, 6, 6, 0.4);/* 设置背景色和透明度 */
+    	color: #FFFFFF;
+    	position: absolute;
+    	bottom: 0px;
+    	font-size: 12px;
+	}
+	
+	.left, .right i{
+    /* ____(5)_______;设置资自定义图标字体 */
+	    font-family: iconfont;/*设置自定义图标字体*/
+	    font-size: 18px;
+	    font-style: normal;
+	    display: block;
+	    text-align: center;
+	    margin: 0 auto;
+	}
+	.left i:before{
+	    content:"\e965";
+	}
+	.right i:before{
+	    content:"\e966";
+	}
+	
+	.left, .right {
+		float: left;
+	    background-color: rgba(6,6,6,0.1);
+	    width: 60px;
+	    height: 60px;
+	    line-height: 60px;/* 垂直居中 */
+	    border-radius: 100%;/* 圆角 */
+	    top: 35%;
+	    position: absolute;
+		
+	}
+	.left{
+		left: -65px;
+	}
+	.right{
+		left: 1032px;
+	}
+	
+	.media{
+		margin: 0 auto;
+		margin-top: 74px;/*  */
+		text-align: center;	
+	}
+	
+	.media_hd h3{
+		margin: 0 auto;  
+		margin-top: -22px;
+		width: 167px;
+    	height: 44px;
+	}
+	
+	.media_bd{
+		overflow: hidden;
+		width: 1055px;
+		margin: 0 auto;
+		height: 240px;
+	}
+	
+	.media_bd ul{
+		width: 1055px;
+		margin: 0 auto;
+	}
+	
+	.media_bd li{
+		float: left;
+		border-right: 1px dashed #ccc;
+		border-bottom: 1px dashed #ccc;
+		/* margin: 0 auto; */
+		text-align: center;
+		width: 210px;
+    	height: 60px;
+    	padding-top: 20px;
+	}
+	
+	.media_bd .nobottom{
+		border-bottom: 0px;
+	}
+	
+	.media_bd .noright{
+		border-right: 0px;
+	}
+	
+	.footer{
+		padding-top: 20px;
+		height: 150px;
+		background-color: #232425;
+		margin-top: 50px;
+		text-align: center;
+	}
+	
+	.footer .footer_hd, .footer_bd{
+		color: white;
+		margin: 20px 0;
+	}
+	
+	.footer_hd a{
+		margin-right: 15px;
+		padding-right: 15px;
+		font-size: 14px;
+		border-right: white solid 1px;
+	}
+	
+	.footer_bd p{
+		color: #888;
+		margin: 30px 0;
+	}
+	
+	#last{
+		border-right: none;
+	}
+</style>
+<body>
+	<!--顶部导航-->
+ 	<div class="top">
+ 		<div class="top_iner">
+ 			<a href="#"><img src="imgs/yundao/logo.png"/></a>
+ 			<ul>
+ 				<li>首页</li>
+ 				<li>云云商城</li>
+ 				<li>智慧门店</li>
+ 				<li>营销平台</li>
+ 				<li>媒体联盟</li>
+ 				<li>关于云道</li>
+ 			</ul>
+ 		</div>
+ 	</div>
+ 	<div class="banner">
+ 		<a><img alt="" src="imgs/yundao/banner.png"/></a>
+ 	</div>
+ 	<!-- 我们的服务 -->
+ 	<div class="service">
+ 		<div class="service_hd">
+ 			<h3><img alt="" src="imgs/yundao/ser.png"/></h3>
+  			<p>shopcmd云道，国内领先的独立电商解决方案及全渠道营销平台。完整的产品体系，简约的系统，个性化前端，全覆盖多渠道营销体系... 我们致力于打造一个服务于品牌商城/独立电商的完整生态，让企业的独立电商之路变得更简单，也更有价值！</p>
+ 		</div>
+ 		<div class="service_bd">
+ 			<ul>
+ 				<li>
+ 					<img alt="" src="imgs/yundao/icon1.png">
+ 					<h3>我是卖家</h3>
+ 					<p>shopcmd云电商解决方案，我们不仅仅是领先的独立商城建站系统。我们 从互联网时代品牌建设和 品牌营销的全新视角，赋予了品牌商城及独立电商更 大的生存空间和存在价值！</p>
+ 					<a>我要建站</a>
+ 				</li>
+ 				<li class="service_bd_li_mid">
+ 					<img alt="" src="imgs/yundao/icon2.png">
+ 					<h3>我要营销</h3>
+ 					<p>云道不断完善的营销系统,联合优质媒体资源,集成常用的网络营销模式及终端，以最简单的产品形态,帮助独立商城实现店铺及商品信息在全网的快速分销。</p>
+ 					<a>我要推广</a>
+ 				</li>
+ 				<li>
+ 					<img alt="" src="imgs/yundao/icon3.png">
+ 					<h3>媒体合作</h3>
+ 					<p>真正的全民营销时代,无需学习,无需维护。通过您的网站、朋友圈、媒体流量、移动展现、媒体解决方案获取收益。我们致力于实现合作媒体流量价值的最大化。</p>
+ 					<a>我要合作</a>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 	</div>
+ 	<!--经典案例-->
+ 	<div class="case">
+ 		<div class="case_hd">
+ 			<h3><img alt="" src="imgs/yundao/case.png"/></h3>
+ 		</div>
+ 		<div class="case_bd">
+ 			<ul>
+ 				<li>
+ 					<img alt="" src="imgs/yundao/serv.jpg">
+ 					<p>帮助中小企业快速开启阿萨德打撒电子商务</p>
+ 				</li>
+ 				<li class="case_bd_li_mid">
+ 					<img alt="" src="imgs/yundao/download.png">
+ 					<p>帮助中小企业快速开启阿萨德打撒电子商务</p>
+ 				</li>
+ 				<li>
+ 					<img alt="" src="imgs/yundao/pro.png">
+ 					<p>帮助中小企业快速开启阿萨德打撒电子商务</p>
+ 				</li>
+ 			</ul>
+ 			
+ 			<a href="#" class="left"><i></i></a>
+ 			<a href="#" class="right"><i></i></a>
+ 		</div>
+ 	</div>
+ 	<!-- 合作媒体 -->
+ 	<div class="media">
+ 		<div class="media_hd">
+ 			<h3><img alt="" src="imgs/yundao/media.png"/></h3>
+ 		</div>
+ 		<div class="media_bd">
+ 			<ul>
+ 				<li><img class="" src="imgs/yundao/tb.png"></li>
+ 				<li><img class="" src="imgs/yundao/jd.png"></li>
+ 				<li><img class="" src="imgs/yundao/al.png"></li>
+ 				<li><img class="" src="imgs/yundao/sp.png"></li>
+ 				<li class="noright"><img  src="imgs/yundao/zk.png"></li>
+ 				<li><img class="" src="imgs/yundao/tb.png"></li>
+ 				<li><img class="" src="imgs/yundao/jd.png"></li>
+ 				<li><img class="" src="imgs/yundao/al.png"></li>
+ 				<li><img class="" src="imgs/yundao/sp.png"></li>
+ 				<li class="noright"><img  src="imgs/yundao/zk.png"></li>
+ 				<li class="nobottom"><img  src="imgs/yundao/tb.png"></li>
+ 				<li class="nobottom"><img  src="imgs/yundao/jd.png"></li>
+ 				<li class="nobottom" ><img src="imgs/yundao/al.png"></li>
+ 				<li class="nobottom"><img  src="imgs/yundao/sp.png"></li>
+ 				<li class="nobottom noright"><img  src="imgs/yundao/zk.png"></li>
+ 			</ul>
+ 		</div>
+ 	
+ 	</div>
+ 	<!--底部网站信息  -->
+ 	<div class="footer">
+ 		<div class="footer_hd">
+ 			<a>shopcmd</a>
+ 			<a>首页</a>
+ 			<a>官网云商城 </a>
+ 			<a>智慧门店 </a>
+ 			<a>营销平台 </a>
+ 			<a>媒体联盟 </a>
+ 			<a id="last">关于我们 </a>
+ 		</div>
+ 		<div class="footer_bd">
+ 			<p>
+ 			@Copyright 2015 苏州海云网络科技有限公司版权所有 | 苏ICP备15038170号 -3
+ 		</p>
+ 		</div>
+ 	</div>
+</body>
+</html>

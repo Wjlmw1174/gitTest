@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="format-detection" content="telephone=no,email=no,adress=no"/>
+
+
+<title>登录</title>
+<!-- 一个网页比较完美地添加到桌面 -->
+<link rel="apple-touch-icon-precomposed" href="touch-icon-iphone.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="touch-icon-ipad.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="touch-icon-ipad-retina.png">
+<!-- 一个网页比较完美地添加到桌面 -->
+<link rel="apple-touch-startup-image" href="imgs/apple-touch/apple-touch-startup-image-320x460.png"/>
+<link rel="stylesheet" href="css/common.css"/>
+
+</head>
+<script type="text/javascript">
+	function getBaseURL() {
+		var url = "/";
+		if (window.location.pathname.indexOf("/") == 0) {
+			var ss = window.location.pathname.split("/");
+			url = url + ss[1] + "/";
+		} else {
+			var ss = window.location.pathname.split("/");
+			url = url + ss[0] + "/";
+		}
+		return url;
+	}
+
+</script>
+<script src="js/libs/require.js" data-main="js/libs/main.js"></script>
+
+<body>
+	<header id="header">
+			<span style="width: 90%;"><input type="text" class="searchYj" placeholder="请输入"></span>
+			<a href="#"><i class="search"></i> </a>
+	</header>
+	<section class="shangp">
+		<ul class="shpingp_ui">
+			<li class="shangp_li">
+				<a href="#">
+					<div class="shangp_xx">
+						<img src="imgs/apple-touch/apple-touch-startup-image-320x460.png"/>
+						<div class="shangpin">
+							<h4 class="biaoti">标题信息</h4>
+							<p class="jieshao">商品介绍1商品介绍2</p>
+							<span class="price"><i class="jiage"><em>¥</em></i><i>5000</i></span>
+						</div>
+					</div>
+				</a>
+			</li>
+			
+			
+		</ul>
+		
+	</section>
+	
+	<footer>
+		<div class="home"><i></i>主页</div>
+        <div class="order"><i></i>订单</div>
+        <div class="shop"><i></i>购物车</div>
+        <div class="user"><i></i>我的</div>
+	</footer>
+
+</body>
+</html>

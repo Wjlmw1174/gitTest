@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="format-detection" content="telephone=no,email=no,adress=no"/>
+
+
+<title>登录</title>
+<!-- 一个网页比较完美地添加到桌面 -->
+<link rel="apple-touch-icon-precomposed" href="touch-icon-iphone.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="touch-icon-ipad.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="touch-icon-ipad-retina.png">
+<!-- 一个网页比较完美地添加到桌面 -->
+<link rel="apple-touch-startup-image" href="imgs/apple-touch/apple-touch-startup-image-320x460.png"/>
+
+</head>
+<script type="text/javascript">
+	function getBaseURL() {
+		var url = "/";
+		if (window.location.pathname.indexOf("/") == 0) {
+			var ss = window.location.pathname.split("/");
+			url = url + ss[1] + "/";
+		} else {
+			var ss = window.location.pathname.split("/");
+			url = url + ss[0] + "/";
+		}
+		return url;
+	}
+
+</script>
+<style type="text/css">
+        
+.banner {
+    width: 497px;
+    height: 246px;
+    position: relative;
+    overflow: hidden;
+}
+ 
+.banner_list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 500%;
+}
+ 
+.banner_list li {
+    float: left;
+    position: relative;
+}
+ 
+.banner_list img {
+    width: 497px;
+    height: 246px;
+}
+ 
+.banner_fd {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+}
+ 
+.banner_fd h3 {
+    font: 14px/16px "Microsoft YaHei", "微软雅黑";
+    height: 16px;
+    border-left: solid 3px #DD3A29;
+    padding-left: 8px;
+    margin: 12px 9px;
+}
+ 
+.prev,
+.next {
+    width: 30px;
+    height: 50px;
+    filter: progid: DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#7F000000', endColorstr='#7F000000');
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 50%;
+    margin-top: -45px;
+}
+ 
+.prev {
+    left: 0;
+}
+ 
+.next {
+    right: 0;
+}
+    </style>
+<body>
+	
+<div class="banner fl">
+    <ul class="banner_list">
+        <li>
+            <img src="imgs/banner/1.jpg" alt="">
+            <div class="banner_fd">
+                <h3>阿斯顿发撒的发撒的发是1</h3>
+            </div>
+        </li>
+        <li>
+            <img src="imgs/banner/2.jpg" alt="">
+            <div class="banner_fd">
+                <h3>阿斯顿发撒的发撒的发是2</h3>
+            </div>
+        </li>
+        <li>
+            <img src="imgs/banner/3.jpg" alt="">
+                    <div class="banner_fd">
+                <h3>阿斯顿发撒的发撒的发是3</h3>
+            </div>
+        </li>
+         <li>
+            <img src="imgs/banner/4.jpg" alt="">
+            <div class="banner_fd">
+                <h3>阿斯顿发撒的发撒的发是4</h3>
+            </div>
+        </li>
+        <li>
+            <img src="imgs/banner/5.jpg" alt="">
+            <div class="banner_fd">
+                <h3>阿斯顿发撒的发撒的发是5</h3>
+            </div>
+        </li>
+    </ul>
+    <a href="" class="prev"></a>
+    <a href="" class="next"></a>
+</div>
+
+
+</body>
+</html>

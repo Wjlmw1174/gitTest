@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="apple-touch-fullscreen" content="yes"/>
+<meta name="format-detection" content="telephone=no,email=no,adress=no"/>
+
+
+<title>登录</title>
+
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;} 
+div,form,input,textarea,img{margin-left: 100px;}
+li{list-style: none;}
+	
+	
+	.clear1{/* 清除浮动 ,会增加没有实际作业的元素 */
+		/* 在最后一个元素上添加样式; */
+		clear: both;
+	}
+	
+	.clearfix:AFTER{/* 父标签清除浮动  */
+		content: "";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	
+	.clearfix{
+		*zoom: 1;  /* IE6和7 专有 */
+	}
+
+	.zhezhao{
+		display: block;/*行内元素必须转换成块级元素，否则宽高不起效果  */
+		width: 300px;
+		height: 300px;
+		margin-left: 100px;
+		position: relative;/*父亲相对定位  */
+	}
+	
+	.mask{
+		width: 100%;
+		height: 100%;
+		background: rgb(0, 0, 0, .4) url("imgs/banner/bofang.jpg") no-repeat center;
+		position: absolute;/* 儿子绝对定位 */
+		top: 0;/* 和定位联动使用，确定位置 */
+		left: 0;/* 和定位联动使用 */
+/* 		border: 1px solid blue; */
+		display: none;/* 正常情况隐藏 */
+	}	
+	
+	.zhezhao:HOVER .mask{
+		display: block;
+	}
+	
+	.yichu{
+		width: 200px;
+		height: 200px;
+		margin-left: 100px;
+		overflow: hidden;/*溢出隐藏  */
+		overflow: scroll;
+		border: 1px solid red;
+	}
+	
+	input {
+		outline: none;
+		/*为了统一浏览器中的显示样式，自定义具体样式  */
+		border: 1px solid #ccc;
+		height: 22px;
+		background: url("imgs/banner/search.png") no-repeat 130px center;/* 水平移动130 垂直局中 */
+	}
+
+	textarea {
+		margin-left: 100px;
+		/*为了统一浏览器中的显示样式，自定义具体样式  */
+		resize: none;/* 取消拖拽 */
+		outline: none;/* 取消边框 */
+		
+		border: 1px solid #ccc;
+	}
+	
+	.weizhi{
+		vertical-align: middle;
+		border: 0;/*老版本浏览器图片有默认边框  */
+	}
+
+	.yichuslh{
+		width: 200px;
+		height: 200px;
+		/* margin-left: 100px;
+		overflow: hidden;/*溢出隐藏  */
+		border: 1px solid red; */
+	}
+	.yichuslh ul li{
+		border: 1px solid blue;
+		/* normal默认处理方式
+		pre： 原封不动的保留你输入时的状态，空格、换行都会保留，并且当文字超出边界时不换行。等同 pre 元素效果 
+		nowrap： 与normal值一致，不同的是会强制所有文本在同一行内显示,除非遇到<br>。
+		pre-wrap： 与pre值一致，不同的是文字超出边界时将自动换行。
+		pre-line： 与normal值一致，但是会保留文本输入时的换行。 */
+		height: 50px;
+		line-height: 50px;
+		/* 显示省略号三句话缺一不可 */
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;/* ellipsis文字溢出显示省略号    clip： 当内联内容溢出块容器时，将溢出部分裁切掉。   */
+	}
+	
+	.hudongm{
+		margin-left: 100px;
+		display: inline-block;
+		height:100px;
+		line-height: 100px;
+		background: url("imgs/banner/anniu2.jpeg") no-repeat  left;/*  */
+		color: #fff;
+		text-decoration: none;/* 去掉下划线 */
+		padding-left: 35px;
+	}
+	
+	.hudongm_span{
+		height:100px;
+		display: inline-block;
+		background: url("imgs/banner/anniu2.jpeg") no-repeat  right;/*  */
+		padding-right: 35px;
+	}
+	
+	/*div 居中测试  */
+	.father{
+		border: 1px solid red;
+		
+		text-align: center;
+	
+	}
+	
+	.son1{
+		border: 1px solid yellow;
+		height: 300px;
+		width: 300px;
+		margin: 0 auto;
+		
+	}
+	
+	
+	
+</style>
+<body>
+ 	<h4>遮罩+a标记出发</h4>	
+	<hr>
+	<a class="zhezhao" href="#">
+		<img alt="" src="imgs/banner/1.jpg" width="300" height="300">
+		<div class="mask"></div>
+	</a>
+	<h4>溢出隐藏</h4>	
+	<hr>
+	<div class="yichu">
+		阿双方均未经贾师傅日记体检带过来水电费接1234567890123456阿双方均未经贾师傅日记体检带过来水电费接1234567890123456阿双方均未经贾师傅日记体检带过来水电费接1234567890123456
+	</div>
+	<h4>鼠标样式</h4>	
+	<hr>
+	<ul style="margin-left: 100px">
+		<li style="cursor: default;">我是小白</li>
+		<li style="cursor: pointer;">我是小手</li>
+		<li style="cursor: move;">我是移动</li>
+		<li style="cursor: text;">我是文本</li>
+		<li style="cursor: help ;">我是帮助</li>
+		<li style="cursor: copy ;">我是复制</li>
+	</ul>
+	<h4>取消轮廓线+背景搜索图标</h4>	
+	<hr>
+	<input>
+	<textarea rows="6" cols="83">评论</textarea>
+	<h4>文字垂直居中</h4>	
+	<hr>
+	my name 龙哥
+	<img class="weizhi" alt="" src="imgs/banner/ss.png" style="border: 1px solid #ccc;">
+	<h4>溢出文字省略号</h4>	
+	<hr>
+	<div class="yichuslh">
+		<ul>
+		<li>我是标题我是标题我是标题我是标题我是标题</li>
+		<li>我是标题我是标题我是标题我是标题我是标题</li>
+		<li>我是标题我是标题我是标题我是标题我是标题</li>
+		</ul>
+	</div>
+	<h4>精灵技术-减少服务器的请求次数，主要是背景图像</h4>	
+	<hr>
+	
+	
+	<h4>滑动门效果-a和span良配（滑动门不能给宽度，解决如导航栏的文字显示长度不一致的问题）</h4>	
+	<hr>
+	<a class="hudongm" href="#">
+		<span class="hudongm_span">张三李四张三李四</span>
+	</a>
+	<h4>div的居中测试</h4>	
+	<hr>
+	<div class="father">
+		div的居中测试
+		div的居中测试
+	</div>
+	<br><br><br><br>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+
+/* ____(1)_____ { */
+  @font-face{
+  font-family: 'iconfont';
+  src: url('fonts/icomoon.eot');
+  src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/icomoon.woff') format('woff'),
+       url('../fonts/icomoon.ttf') format('truetype'),
+       url('fonts/icomoon.svg#iconfont') format('svg');
+}
+
+footer{
+    /* _____(2)_____;设置弹性盒子 */
+    /* _____(3)_______;水平对齐，两边间距是中间间距的一半 */
+    /* _____(4)______;垂直居中对齐 */
+    display: flex;/*设置弹性盒子，块状元素布局使用，页面布局的时候经常需要给块级子元素居中，目前发现最方便直接的是父级元素使用display：flex属性，*/
+    justify-content: space-around;/*水平对齐，两边间距是中间间距的一半*/
+    align-items: center;/* 垂直居中对齐 */
+    position: fixed;/* 固定定位 */
+    bottom:0;/* footer这个元素距离底部的距离，0表示和底部重合 */
+    left:50%;/* 距离左边距50% */
+    transform: translateX(-50%);
+    width: 100%;
+    height: 50px;
+    border-top:1px solid #ccc;
+    max-width: 760px;/* 设置页面宽度，app是：760px, 网页：100%; */
+    font-size: 12px;
+    text-align: center;
+    
+  /*   border:1px solid #000; */
+}
+footer div{
+	/* footer里面的子级元素 */
+    width: 80px;
+}
+footer div i{
+    /* ____(5)_______;设置资自定义图标字体 */
+    font-family: iconfont;/*设置资自定义图标字体*/
+    font-size: 18px;
+    font-style: normal;
+    display: block;
+}
+footer .home i:before{
+    content:"\e901";
+}
+footer .order i:before{
+    content:"\e922";
+}
+footer .shop i:before{
+    content:"\e93a";
+}
+footer .user i:before{
+    content:"\e971";
+}
+
+
